@@ -18,17 +18,17 @@ requirements:
   build:
     - {{ compiler('c') }}
     - {{ stdlib("c") }}
-    - numpy >=2.0
+    - numpy >=2.2.1
   host:
     - python
     - setuptools
     - wheel
-    - numpy >=2.0
+    - numpy >=2.2.1
     - cython >=3.0
+    - scipy
     - pip
   run:
     - python
-    - numpydantic
     - joblib
     - pandas
     - scipy
