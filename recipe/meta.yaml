@@ -1,5 +1,5 @@
 {% set name = "pyspatialstats" %}
-{% set version = "0.1.0" %}
+{% set version = "0.1.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/pyspatialstats-{{ version }}.tar.gz
-  sha256: 52b1dd54ee776f4bc486e15ffb8537bd7b1251527165362438fccb7f430547e1
+  sha256: d7a224fab537e7ac30dd225d2de9d6f713812956f9fe989f236fb4de12c1e718
 
 build:
   script: {{ PYTHON }} -m pip install . -vv --no-build-isolation
@@ -18,17 +18,17 @@ requirements:
   build:
     - {{ compiler('c') }}
     - {{ stdlib("c") }}
-    - numpy >=2.0
+    - numpy >=2.2.1
   host:
     - python
     - setuptools
     - wheel
-    - numpy >=2.0
+    - numpy >=2.2.1
     - cython >=3.0
+    - scipy
     - pip
   run:
     - python
-    - numpydantic
     - joblib
     - pandas
     - scipy
@@ -47,7 +47,7 @@ about:
   license: MIT
   license_file: LICENSE
   summary: Spatial statistics for Python
-  doc_url: https://focal-stats.readthedocs.io/en/latest/?badge=latest
+  doc_url: https://pyspatialstats.readthedocs.io/en/latest/?badge=latest
   dev_url: https://github.com/jasperroebroek/pyspatialstats
 
 extra:
