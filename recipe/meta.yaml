@@ -11,8 +11,7 @@ source:
 
 build:
   script: {{ PYTHON }} -m pip install . -vv --no-build-isolation
-  number: 0
-  skip: true  # [py<310 or python_impl=="pypy"]
+  number: 1
 
 requirements:
   build:
