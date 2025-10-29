@@ -1,5 +1,5 @@
 {% set name = "pyspatialstats" %}
-{% set version = "0.1.1" %}
+{% set version = "0.1.2" %}
 
 package:
   name: {{ name|lower }}
@@ -7,11 +7,11 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/pyspatialstats-{{ version }}.tar.gz
-  sha256: d7a224fab537e7ac30dd225d2de9d6f713812956f9fe989f236fb4de12c1e718
+  sha256: 0d75d5c830f8dc1d9c62c398eb0d6e8820e8e5ed3c94a673bef2b8c70fe84d45
 
 build:
   script: {{ PYTHON }} -m pip install . -vv --no-build-isolation
-  number: 1
+  number: 0
 
 requirements:
   build:
