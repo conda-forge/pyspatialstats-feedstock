@@ -6,12 +6,12 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/pyspatialstats-{{ version }}.tar.gz
+  url: https://files.pythonhosted.org/packages/source/{{ name[0] }}/{{ name }}/pyspatialstats-{{ version }}.tar.gz
   sha256: 0d75d5c830f8dc1d9c62c398eb0d6e8820e8e5ed3c94a673bef2b8c70fe84d45
 
 build:
   script: {{ PYTHON }} -m pip install . -vv --no-build-isolation
-  number: 0
+  number: 1
 
 requirements:
   build:
